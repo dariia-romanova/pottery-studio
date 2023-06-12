@@ -1,0 +1,36 @@
+.classes {
+
+}
+
+.classes_image {
+  position: absolute;
+  right: 100px;
+  top: 120px;
+  max-width: 40%;
+}
+
+.classes_content {
+  padding: 110px 0 200px;
+}
+
+@media (max-width: 960px) {
+  .classes_image {
+    right: 20px;
+    top: 120px;
+  }
+
+  .classes_content {
+    padding: 110px 0 200px;
+  }
+}
+
+@media (max-width: 620px) {
+  .classes_image {
+    right: 20px;
+    top: 200px;
+  }
+
+  .classes_content {
+    padding: 44px 0 120px;
+  }
+}

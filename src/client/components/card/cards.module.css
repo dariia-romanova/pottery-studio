@@ -1,7 +1,15 @@
 .cards {
   display: grid;
+}
+
+.cards_short {
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
+}
+
+.cards_extended {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
 }
 
 .card {
@@ -49,6 +57,21 @@
   line-height: 1.2;
 }
 
+.card_description {
+
+}
+
+.card_bookings {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card_price {
+  color: #D74545;
+  font-weight: 700;
+  font-size: 50px;
+}
+
 @media (max-width: 960px) {
 
 }
@@ -81,6 +104,10 @@
   .card_title {
     font-size: 40px;
   }
+
+  .card_price {
+    font-size: 40px;
+  }
 }
 
 @media (max-width: 720px) {
@@ -111,6 +138,10 @@
   }
 
   .card_title {
+    font-size: 28px;
+  }
+
+  .card_price {
     font-size: 28px;
   }
 }

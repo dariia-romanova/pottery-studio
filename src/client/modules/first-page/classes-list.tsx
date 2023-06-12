@@ -24,7 +24,7 @@ export const ClassesList = ({ cardsList, title, button }: ClassesListProps) => {
   return (
     <Section title={title}>
       <div className={styles.workshops}>
-        <Cards cards={cards}  />
+        <Cards cards={cards} type="short" />
       </div>
       <Button link={button.link} text={button.text}/>
     </Section>

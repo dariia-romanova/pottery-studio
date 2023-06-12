@@ -1,8 +1,10 @@
-import styles from './workshops.module.css';
-import WorkshopsImage1 from '../../assets/workshops-1.svg';
-import WorkshopsImage2 from '../../assets/workshops-2.svg';
-import { ClassesList } from "./classes-list";
+import Image from '../../assets/workshops-page-1.svg';
+import styles from './classes-page.module.css';
+import { HeroSection } from "../../components/hero-section/hero-section";
+import { H1 } from '../../components/h1/h1';
+import { Cards } from '../../components/card/cards';
 import { Container } from '../../components/container/container';
+import { Footer } from '../../components/footer/footer';
 
 const cardsList = [
   {
@@ -46,34 +48,20 @@ const cardsList = [
   },
 ];
 
-export const Workshops = () => {
-  return (
-    <div>
-      <ClassesList
-        cardsList={cardsList}
-        title="workshops"
-        button= {{
-          link: "./workshops",
-          text: 'all workshops'
-        }}
-      />
 
+export const WorkshopsPage = () => {
+  return (
+    <>
+      <HeroSection >
+        <H1 title="Workshops" />
+        <img src={Image} className={styles.classes_image} />
+      </HeroSection>
       <Container>
-        <div className={styles.workshops_images}>
-          <div className={styles.workshops_image_container}>
-            <img
-              className={styles.workshops_image}
-              src={WorkshopsImage1}
-            />
-          </div>
-          <div className={styles.workshops_image_container}>
-            <img
-              className={styles.workshops_image}
-              src={WorkshopsImage2}
-            />
-          </div>
+        <div className={styles.classes_content} >
+          <Cards cards={cardsList} type="extended" />
         </div>
       </Container>
-    </div>
+      <Footer />
+    </>
   );
 };

@@ -1,15 +1,21 @@
 import styles from './cards.module.css';
 import { Card, CardType } from "./card";
+import clsx from 'clsx';
 
 type CardsProps = {
-  cards: CardType[]
+  cards: CardType[],
+  type: 'short' | 'extended';
 };
 
-export const Cards = ({ cards }: CardsProps) => {
+export const Cards = ({ cards, type }: CardsProps) => {
   return (
-    <div className={styles.cards}>
+    <div className={clsx(
+      styles.cards,
+      type === 'short' && styles.cards_short,
+      type === 'extended' && styles.cards_extended
+    )}>
       {cards.map((card) => (
-        <Card card={card} type="short" key={card.link} />
+        <Card card={card} type={type} key={card.link} />
       ))}
     </div>
   );
