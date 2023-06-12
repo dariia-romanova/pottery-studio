@@ -1,0 +1,26 @@
+.heroSection {
+  background-color: #F59ADB;
+}
+
+.heroSection_title {
+  padding: 100px 0px 120px;
+}
+
+@media (max-width: 960px) {
+  .heroSection_title {
+    padding: 56px 0px 80px;
+  }
+}
+
+@media (max-width: 620px) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .heroSection_title {
+    padding: 20px 0px 80px;
+  }
+}
+

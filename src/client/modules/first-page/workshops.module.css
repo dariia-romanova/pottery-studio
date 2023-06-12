@@ -1,0 +1,27 @@
+.workshops_images {
+  margin-top: 48px;
+  display: flex;
+  justify-content: right;
+};
+
+.workshops_image_container {
+  width: 100px;
+  object-fit: contain;
+  height: auto;
+}
+
+.workshops_image {
+  width: 100%
+}
+
+@media (max-width: 620px) {
+  .workshops_images {
+    margin-top: 12px;
+    /* flex-direction: column; */
+    align-items: center;
+  };
+
+  .workshops_image {
+    width: 75%;
+  }
+}

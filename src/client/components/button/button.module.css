@@ -1,0 +1,37 @@
+.button {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.button_content {
+  display: flex;
+}
+
+.button_title {
+  margin-right: 20px;
+}
+
+.button_arrow {
+  position: relative;
+  left: 0;
+  transition: left 0.25s;
+}
+
+.button:hover {
+  .button_arrow {
+    left: 10px;
+  }
+}
+
+@media (max-width: 960px) {
+  .button {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 620px) {
+  .button {
+    font-size: 18px;
+  }
+}

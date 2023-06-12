@@ -1,0 +1,30 @@
+.aboutUs_images {
+  margin-top: 48px;
+  display: flex;
+  justify-content: right;
+};
+
+.aboutUs_image_container {
+  object-fit: contain;
+  height: auto;
+}
+.aboutUs_image_container {
+  object-fit: contain;
+  height: auto;
+}
+
+.aboutUs_image {
+  width: 100%
+}
+
+@media (max-width: 620px) {
+  .aboutUs_images {
+    margin-top: 12px;
+    /* flex-direction: column; */
+    align-items: center;
+  };
+
+  .aboutUs_image {
+    width: 75%;
+  }
+}

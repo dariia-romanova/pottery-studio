@@ -1,0 +1,15 @@
+.workshops {
+  margin-bottom: 74px;
+}
+
+@media (max-width: 960px) {
+  .workshops {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 620px) {
+  .workshops {
+    margin-bottom: 40px;
+  }
+}

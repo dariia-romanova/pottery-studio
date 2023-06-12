@@ -1,0 +1,28 @@
+.coworking {
+  background-color: #DDFA8A;
+  padding-bottom: 130px;
+}
+
+.coworking_paragraph {
+  margin-bottom: 70px;
+}
+
+@media (max-width: 960px) {
+  .coworking {
+    padding-bottom: 80px;
+  }
+
+  .coworking_paragraph {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 620px) {
+  .coworking {
+    padding-bottom: 36px;
+  }
+
+  .coworking_paragraph {
+    margin-bottom: 40px;
+  }
+}
