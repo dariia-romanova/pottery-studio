@@ -1,8 +1,8 @@
+import useMediaQuery from "../../hooks/useMediaQuery";
 import styles from "./classes-list.module.css";
+import { Section } from "../../components/section/section";
 import { Button } from "../../components/button/button";
 import { Cards } from "../../components/card/cards";
-import { Section } from "../../components/section/section";
-import useMediaQuery from "../../hooks/useMediaQuery";
 import { CardType } from "../../components/card/card";
 
 type ClassesListProps = {

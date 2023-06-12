@@ -1,0 +1,63 @@
+.hero_image {
+  position: absolute;
+}
+
+.hero_image_1 {
+  right: 100px;
+  bottom: 0;
+  transform: translateY(50%);
+}
+
+.hero_image_2 {
+  right: 160px;
+  top: 120px;
+}
+
+.hero_image_highlight {
+  left: 60px;
+  bottom: 100px;
+}
+
+@media (max-width: 1200px) {
+  .hero_image_highlight {
+    left: 20px;
+  }
+}
+
+@media (max-width: 1136px) {
+  .hero_image_highlight {
+    left: 410px;
+    width: 280px;
+  }
+}
+
+@media (max-width: 1004px) {
+  .hero_image_highlight {
+    bottom: 200px;
+  }
+}
+
+@media (max-width: 960px) {
+  .hero_image_1 {
+    display: none;
+  }
+
+  .hero_image_2 {
+    right: 20px;
+    top: 120px;
+  }
+
+  .hero_image_highlight {
+    left: 16px;
+    width: 220px;
+    bottom: 70px;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero_image_2 {
+    width: 60px;
+    right: 20px;
+    top: 120px;
+  }
+}

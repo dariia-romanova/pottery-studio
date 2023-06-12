@@ -68,8 +68,8 @@ export const Workshops = () => {
           </div>
           <div className={styles.workshops_image_container}>
             <img
+              className={styles.workshops_image}
               src={WorkshopsImage2}
-              className={styles.aboutUs_image}
             />
           </div>
         </div>

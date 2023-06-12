@@ -1,9 +1,11 @@
 .heroSection {
   background-color: #F59ADB;
+  position: relative;
 }
 
 .heroSection_title {
   padding: 100px 0px 120px;
+  max-width: 1240px;
 }
 
 @media (max-width: 960px) {

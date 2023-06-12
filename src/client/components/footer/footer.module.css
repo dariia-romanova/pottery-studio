@@ -1,5 +1,14 @@
 .footer {
-  padding-bottom: 44px;
+  padding: 300px 0 44px; 
+}
+
+.footer_images {
+  position: absolute;
+  transform: translateY(-60%);
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .footer_navbar {
@@ -17,6 +26,28 @@
 }
 
 @media (max-width: 960px) {
+  .footer {
+    padding-top: 260px; 
+  }
+
+  .footer_images {
+    transform: translateY(-100%);
+    align-items: center;
+    right: 0;
+  }
+  
+  .footer_image_1 {
+    max-width: 100%;
+  }
+
+  .footer_image_2 {
+    display: none;
+  }
+
+  .footer_image_1 {
+    max-width: 100%;
+  }
+
   .footer_contacts {
     margin-bottom: 64px;
   }
