@@ -4,6 +4,7 @@
 
 .footer_images {
   position: absolute;
+  z-index: 10;
   transform: translateY(-60%);
   right: 50px;
   display: flex;

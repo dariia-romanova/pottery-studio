@@ -2,6 +2,7 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import { MainPage } from "./modules/first-page/main-page";
 import { WorkshopsPage } from "./modules/classes-page/worksops-page";
 import { LongTermsPage } from "./modules/classes-page/long-terms-page";
+import { CoworkingPage } from "./modules/coworking-page/coworking-page";
 
 
 const router = createBrowserRouter(createRoutesFromElements(
@@ -20,7 +21,7 @@ const router = createBrowserRouter(createRoutesFromElements(
     />
     <Route
         path = "/coworking"
-        element={<>wqwqw</>}
+        element={<CoworkingPage />}
     />
   </>
 ));

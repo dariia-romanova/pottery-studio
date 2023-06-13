@@ -73,10 +73,6 @@
 }
 
 @media (max-width: 960px) {
-
-}
-
-@media (max-width: 960px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
