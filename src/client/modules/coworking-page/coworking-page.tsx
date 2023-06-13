@@ -7,7 +7,6 @@ import { HeroSection } from "../../components/hero-section/hero-section";
 import { Paragraph } from '../../components/paragraph/paragraph';
 import { Container } from '../../components/container/container';
 import { CoworkingForm } from './coworking-form';
-import { Footer } from '../../components/footer/footer';
 
 export const CoworkingPage = () => {
   return (
@@ -26,9 +25,7 @@ export const CoworkingPage = () => {
             <CoworkingForm />
           </div>
         </div>
-        <Footer />
       </Container>
-
     </>
   );
 };

@@ -13,7 +13,6 @@ export const HeroSection = ({ children }: HeroSectionProps) => {
   return (
     <div className={styles.heroSection}>
       <Container>
-        <Header />
         <div className={styles.heroSection_title}>
           {!!children && (
             <div>

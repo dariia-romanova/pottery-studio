@@ -6,10 +6,11 @@ type InputProps = {
   label: string,
   tip: string,
   required?: boolean,
+  fixedValue?: string,
 }
 
-export const Input = ({ type, label, tip, required }: InputProps) => {
-  const [value, setValue] = useState('');
+export const Input = ({ type, label, tip, required, fixedValue }: InputProps) => {
+  const [value, setValue] = useState(fixedValue || '');
 
   return (
     <div>
@@ -25,16 +26,18 @@ export const Input = ({ type, label, tip, required }: InputProps) => {
             className={styles.input_area}
             placeholder={tip}
             rows={4}
-            value={value}
+            value={fixedValue || value}
             onChange={(event) => setValue(event.target.value)}
+            readOnly={!!fixedValue}
           />
         ): (
           <input
             type={type}
-            value={value}
+            value={fixedValue || value}
             placeholder={tip}
             className={styles.input_area}
             onChange={(event) => setValue(event.target.value)}
+            readOnly={!!fixedValue}
           />
         )}
       </label>

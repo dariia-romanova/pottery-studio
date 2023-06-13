@@ -17,6 +17,14 @@
   font-size: 32px;
 }
 
+.card__full {
+  font-weight: 200;
+  font-size: 42px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .card:hover {
   .card_title {
    color: #D74545;
@@ -37,6 +45,12 @@
   gap: 24px;
 }
 
+.card__full_head {
+  display: flex;
+  justify-content: space-between;
+  max-width: 90%;
+}
+
 .card_complexity {
   gap: 4px;
   display: flex;
@@ -44,11 +58,14 @@
   width: max-content;
 }
 
-
 .card_complexity_underline {
   height: 3px;
   background-color: #1F1F1F;
   border-radius: 2px;
+}
+
+.card_lessons {
+  font-weight: 200;
 }
 
 .card_title {
@@ -57,13 +74,16 @@
   line-height: 1.2;
 }
 
-.card_description {
-
-}
-
 .card_bookings {
   display: flex;
   justify-content: space-between;
+}
+
+.card__full_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 90%;
 }
 
 .card_price {
@@ -72,6 +92,13 @@
   font-size: 50px;
 }
 
+.card__full_price {
+  color: #D74545;
+  font-weight: 700;
+  font-size: 80px;
+}
+
+
 @media (max-width: 960px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
@@ -79,6 +106,16 @@
 
   .card {
     font-size: 22px;
+  }
+
+  .card__full {
+    font-weight: 200;
+    font-size: 36px;
+    gap: 24px;
+  }
+
+  .card__full_head {
+    max-width: 100%;
   }
 
   .card_content {
@@ -93,8 +130,13 @@
 
 
   .card_dates {
+    font-weight: 200;
     display: flex;
     justify-content: space-between;
+  }
+
+  .card__full_info {
+    max-width: 100%;
   }
 
   .card_title {
@@ -103,6 +145,10 @@
 
   .card_price {
     font-size: 40px;
+  }
+
+  .card__full_price {
+    font-size: 60px;
   }
 }
 
@@ -124,6 +170,12 @@
     font-size: 18px;
   }
 
+  .card__full {
+    font-weight: 200;
+    font-size: 24px;
+    gap: 16px;
+  }
+
   .card_content {
     gap: 8px;
   }
@@ -139,5 +191,9 @@
 
   .card_price {
     font-size: 28px;
+  }
+
+  .card__full_price {
+    font-size: 42px;
   }
 }

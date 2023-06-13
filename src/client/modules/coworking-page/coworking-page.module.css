@@ -5,7 +5,7 @@
 }
 
 .coworking_content {
-  padding: 110px 0 0;
+  padding-top: 110px;
 }
 
 .coworking_formContainer {
@@ -28,7 +28,7 @@
 
 @media (max-width: 960px) {
   .coworking_content {
-    padding: 110px 0 120px;
+    padding-top: 110px;
   }
   
   .coworking_formContainer {
@@ -46,7 +46,7 @@
 
 @media (max-width: 620px) {
   .coworking_content {
-    padding: 44px 0 80px;
+    padding-top: 44px;
   }
 
   .coworking_form {

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from './cards.module.css';
 import { Button } from '../button/button';
+import { Paragraph } from '../paragraph/paragraph';
 
 export type CardType = {
     link: string,
@@ -22,6 +23,35 @@ type CardProps = {
 };
 
 export const Card = ({ card, type }: CardProps) => {
+  if (type === 'full') {
+    return (
+      <div className={styles.card__full}>
+        <div className={styles.card__full_head}>
+          <div className={styles.card_complexity}>
+            <p>{card.complexity}</p>
+            <div className={styles.card_complexity_underline} />
+          </div>
+
+          <p>{card.placesLeft} place left</p>
+        </div>
+
+        <div className={styles.card_lessons}>{card.lessons}</div>
+
+        <Paragraph text={card.description} />
+
+        <div className={styles.card__full_info}>
+          <div className={styles.card__full_dates}>
+              <p>{card.day} {card.time}</p>
+              <p>{card.dateStart} - {card.dateEnd}</p>
+            </div>
+
+            <div className={styles.card__full_price}>{card.price}$</div>
+        </div>
+      </div>
+
+    );
+  }
+
   return (
     <div className={styles.card}>
       <Link to={card.link} className={styles.card_content}>
@@ -31,7 +61,7 @@ export const Card = ({ card, type }: CardProps) => {
             <div className={styles.card_complexity_underline} />
           </div>
 
-            <div>{card.lessons}</div>
+            <div className={styles.card_lessons}>{card.lessons}</div>
           </div>
   
           <h3 className={styles.card_title}>{card.title}</h3>

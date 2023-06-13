@@ -14,7 +14,6 @@ export const MainPage = () => {
       <Workshops />
       <LongTerms />
       <Coworking />
-      <Footer />
     </>
   );
 }

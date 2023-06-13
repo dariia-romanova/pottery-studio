@@ -9,7 +9,12 @@ import { Paragraph } from '../paragraph/paragraph';
 export const Footer = () => {
   return (
     <div className={styles.footer}>
-      <Container>
+      <div className={styles.footer_info}>
+        <div className={styles.footer_contacts}>
+          <Logo size="big" />
+          <Paragraph text='Kyiv, Kyiv street, 20' mobileCentered />
+          <Paragraph text='+38099 202 00 22' mobileCentered />
+        </div>
         <div className={styles.footer_images}>
           <div className={styles.footer_imageContainer}>
             <img src={FooterImage1} className={styles.footer_image_1} />
@@ -18,16 +23,11 @@ export const Footer = () => {
             <img src={FooterImage2} className={styles.footer_image_2} />
           </div>
         </div>
-        <div className={styles.footer_contacts}>
-          <Logo size="big" />
-          <Paragraph text='Kyiv, Kyiv street, 20' mobileCentered />
-          <Paragraph text='+38099 202 00 22' mobileCentered />
-        </div>
-        <div className={styles.footer_navbar}>
-          <p>2023</p>
-          <NavBar />
-        </div>
-      </Container>
+      </div>
+      <div className={styles.footer_navbar}>
+        <p>2023</p>
+        <NavBar />
+      </div>
     </div>
   );
 };
