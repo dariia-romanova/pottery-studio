@@ -1,10 +1,9 @@
 import styles from './footer.module.css';
-import FooterImage1 from '../../assets/footer-1.svg';
-import FooterImage2 from '../../assets/footer-2.svg';
-import { Container } from "../container/container";
 import { Logo } from "../logo/logo";
 import { NavBar } from "../nav-bar/nav-bar";
 import { Paragraph } from '../paragraph/paragraph';
+import { FooterImage } from './footer-image';
+import { FooterImageText } from './footer-image-text';
 
 export const Footer = () => {
   return (
@@ -17,10 +16,10 @@ export const Footer = () => {
         </div>
         <div className={styles.footer_images}>
           <div className={styles.footer_imageContainer}>
-            <img src={FooterImage1} className={styles.footer_image_1} />
+            <FooterImage />
           </div>
           <div className={styles.footer_imageContainer}>
-            <img src={FooterImage2} className={styles.footer_image_2} />
+            <FooterImageText />
           </div>
         </div>
       </div>

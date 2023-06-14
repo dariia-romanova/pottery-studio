@@ -10,6 +10,16 @@
   overflow: hidden;
 }
 
+.footer_image_rightHand {
+  animation: hand-rotation 1s ease-in-out infinite alternate;
+  transform-origin: center right;
+}
+
+.footer_image_leftHand {
+  animation: hand-rotation 1s ease-in-out infinite alternate;
+  transform-origin: center left;
+}
+
 .footer_navbar {
   display: flex;
   font-size: 24px;
@@ -18,6 +28,7 @@
 }
 
 .footer_contacts {
+  width: 100%;
   margin-bottom: 90px;
   display: flex;
   flex-direction: column;
@@ -67,5 +78,14 @@
 
   .footer_navbar {
     flex-direction: column-reverse;
+  }
+}
+
+@keyframes hand-rotation {
+  from {
+    transform: rotate(-7deg);
+  }
+  to {
+    transform: rotate(7deg);
   }
 }
