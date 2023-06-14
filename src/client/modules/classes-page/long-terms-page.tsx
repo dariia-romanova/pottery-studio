@@ -11,7 +11,9 @@ export const LongTermsPage = () => {
   return (
     <>
       <HeroSection >
-        <H1 title="Long-term courses" />
+        <H1>
+          Long-term courses
+        </H1>
         <img src={Image} className={styles.classes_image} />
       </HeroSection>
       <Container>

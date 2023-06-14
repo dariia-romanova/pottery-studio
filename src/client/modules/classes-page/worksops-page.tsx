@@ -10,7 +10,9 @@ export const WorkshopsPage = () => {
   return (
     <>
       <HeroSection >
-        <H1 title="Workshops" />
+        <H1>
+          Workshops
+        </H1>
         <img src={Image} className={styles.classes_image} />
       </HeroSection>
       <Container>

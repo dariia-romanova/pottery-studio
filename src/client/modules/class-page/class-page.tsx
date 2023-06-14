@@ -14,7 +14,9 @@ export const ClassPage = ({ card } : ClassPageProps) => {
   return (
     <>
       <HeroSection>
-        <H1 title={card.title} />
+        <H1>
+          {card.title}
+        </H1>
       </HeroSection>
       <div className={styles.class_content}>
         <Container>

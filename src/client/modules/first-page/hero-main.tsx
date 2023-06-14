@@ -10,7 +10,9 @@ import { H1 } from "../../components/h1/h1";
 export const HeroMain = () => {
   return (
     <HeroSection >
-      <H1 title="Your pottery and ceramics studio in Kyiv" />
+      <H1>
+        Your pottery and ceramics studio in Kyiv
+      </H1>
       <div>
         <img src={HeroImage1} className={clsx(styles.hero_image, styles.hero_image_1)} />
         <img src={HeroImage2} className={clsx(styles.hero_image, styles.hero_image_2)} />

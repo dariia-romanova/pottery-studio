@@ -12,7 +12,9 @@ export const CoworkingPage = () => {
   return (
     <>
       <HeroSection>
-        <H1 title="Coworking" />
+        <H1>
+          Coworking
+        </H1>
         <img src={HeaderImage} className={styles.coworking_heroImage} />
       </HeroSection>
         <Container>
