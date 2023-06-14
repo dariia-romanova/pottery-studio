@@ -1,4 +1,4 @@
-import { longTermsList } from "../../constants/long-terms";
+import { longTermsList } from "../../../constants/long-terms";
 import { ClassesList } from "./classes-list";
 
 export const LongTerms = () => {

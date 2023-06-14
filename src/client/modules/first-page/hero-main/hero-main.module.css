@@ -1,0 +1,92 @@
+.hero_highlight {
+  position: relative;
+}
+
+.hero_highlight_image {
+  position: absolute;
+  max-width: 105%;
+  left: -20px;
+  height: auto;
+  top: 0;
+}
+
+.hero_highlight_path {
+  stroke-dasharray: 722;
+  stroke-dashoffset: 722;
+  animation: highlight_path_animation 1.5s ease-out 0.5s forwards;
+}
+
+.hero_decoration_image {
+  position: absolute;
+  right: 200px;
+  top: 0;
+  transform: translateY(50%);
+}
+
+.hero_decoration_text_path {
+  animation: highlight_path_animation 0.6s ease-out forwards;
+}
+
+.hero_decoration_text_path_1 {
+  animation-delay: 0;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+}
+
+.hero_decoration_text_path_2 {
+  animation-delay: 0.5s;
+  stroke-dasharray: 150;
+  stroke-dashoffset: 150;
+}
+
+.hero_decoration_text_path_3 {
+  animation-delay: 1s;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+
+.hero_decoration_text_path_4 {
+  animation-delay: 1.5s;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+
+.hero_decoration_text_path_5 {
+  animation-delay: 1.8s;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+}
+
+.hero_decoration_text_path_6 {
+  animation-delay: 2s;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+
+.hero_decoration_text_path_arrow {
+  animation: highlight_path_animation 1s ease-out forwards;
+  animation-delay: 2.2s;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+}
+
+.hero_decoration_text {
+  position: absolute;
+  bottom: -100px;
+  right: 100px;
+}
+
+
+@media (max-width: 960px) {
+  .hero_highlight_image {
+    left: -10px;
+  }
+}
+
+
+
+@keyframes highlight_path_animation {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

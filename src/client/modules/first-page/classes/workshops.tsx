@@ -1,9 +1,9 @@
 import styles from './workshops.module.css';
-import WorkshopsImage1 from '../../assets/workshops-1.svg';
-import WorkshopsImage2 from '../../assets/workshops-2.svg';
 import { ClassesList } from "./classes-list";
-import { Container } from '../../components/container/container';
-import { workshopsList } from '../../constants/workshops';
+import { Container } from '../../../components/container/container';
+import { workshopsList } from '../../../constants/workshops';
+import { WorkshopsDecorationImage } from './workshops-decoration-image';
+import { WorkshopsDecorationText } from './workshops-decoration-text';
 
 export const Workshops = () => {
   return (
@@ -20,16 +20,10 @@ export const Workshops = () => {
       <Container>
         <div className={styles.workshops_images}>
           <div className={styles.workshops_image_container}>
-            <img
-              className={styles.workshops_image}
-              src={WorkshopsImage1}
-            />
+            <WorkshopsDecorationText />
           </div>
           <div className={styles.workshops_image_container}>
-            <img
-              className={styles.workshops_image}
-              src={WorkshopsImage2}
-            />
+            <WorkshopsDecorationImage />
           </div>
         </div>
       </Container>

@@ -1,8 +1,8 @@
 import styles from './about-us.module.css';
-import { Paragraph } from "../../components/paragraph/paragraph"
-import { Section } from "../../components/section/section"
-import AboutUsImage1 from '../../assets/about-us-1.svg';
-import AboutUsImage2 from '../../assets/about-us-2.svg';
+import { Paragraph } from "../../../components/paragraph/paragraph"
+import { Section } from "../../../components/section/section"
+import { AboutUsDecorationImage } from './about-us-decoration-image';
+import { AboutUsDecorationText } from './about-us-decoration-text';
 
 export const AboutUs = () => {
   return (
@@ -13,13 +13,10 @@ export const AboutUs = () => {
 
       <div className={styles.aboutUs_images}>
         <div className={styles.aboutUs_image_container}>
-          <img
-            className={styles.aboutUs_image}
-            src={AboutUsImage1}
-          />
+          <AboutUsDecorationText />
         </div>
         <div className={styles.aboutUs_image_container}>
-          <img src={AboutUsImage2} className={styles.aboutUs_image} />
+          <AboutUsDecorationImage />
         </div>
       </div>
     </Section>

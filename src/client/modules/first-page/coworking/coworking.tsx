@@ -1,9 +1,8 @@
 import styles from './coworking.module.css';
 
-import CoworkingImage from '../../assets/coworking-1.svg';
-import { Button } from "../../components/button/button";
-import { Paragraph } from "../../components/paragraph/paragraph";
-import { Section } from "../../components/section/section";
+import { Button } from "../../../components/button/button";
+import { Paragraph } from "../../../components/paragraph/paragraph";
+import { Section } from "../../../components/section/section";
 
 export const Coworking = () => {
   return (

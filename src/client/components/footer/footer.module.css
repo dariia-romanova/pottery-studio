@@ -83,9 +83,9 @@
 
 @keyframes hand-rotation {
   from {
-    transform: rotate(-7deg);
+    transform: rotate(-5deg);
   }
   to {
-    transform: rotate(7deg);
+    transform: rotate(5deg);
   }
 }
