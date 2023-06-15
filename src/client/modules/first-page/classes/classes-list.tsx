@@ -11,10 +11,11 @@ type ClassesListProps = {
   button: {
     link: string,
     text: string,
-  }
+  },
+  baseLink: string,
 }
 
-export const ClassesList = ({ cardsList, title, button }: ClassesListProps) => {
+export const ClassesList = ({ cardsList, title, button, baseLink }: ClassesListProps) => {
   const isDesktop = useMediaQuery('(min-width: 960px)');
   const isTablet = useMediaQuery('(min-width: 620px)');
 
@@ -24,7 +25,7 @@ export const ClassesList = ({ cardsList, title, button }: ClassesListProps) => {
   return (
     <Section title={title}>
       <div className={styles.workshops}>
-        <Cards cards={cards} type="short" />
+        <Cards cards={cards} type="short" baseLink={baseLink} />
       </div>
       <Button link={button.link} text={button.text}/>
     </Section>

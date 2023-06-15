@@ -1,4 +1,3 @@
-import Image from '../../assets/long-terms-page-1.svg';
 import styles from './classes-page.module.css';
 import { HeroSection } from "../../components/hero-section/hero-section";
 import { H1 } from '../../components/h1/h1';
@@ -22,7 +21,7 @@ export const LongTermsPage = () => {
       </HeroSection>
       <Container>
         <div className={styles.classes_content} >
-          <Cards cards={longTermsList} type="extended" />
+          <Cards cards={longTermsList} type="extended" baseLink='/long-term-classes' />
         </div>
       </Container>
     </>

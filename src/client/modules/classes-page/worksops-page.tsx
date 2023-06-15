@@ -19,7 +19,7 @@ export const WorkshopsPage = () => {
       </HeroSection>
       <Container>
         <div className={styles.classes_content} >
-          <Cards cards={workshopsList} type="extended" />
+          <Cards cards={workshopsList} type="extended" baseLink='/workshops' />
         </div>
       </Container>
     </>

@@ -7,9 +7,10 @@ export const LongTerms = () => {
       cardsList={longTermsList}
       title="long-term courses"
       button= {{
-        link: "./long-terms",
+        link: "./long-term-classes",
         text: 'all courses'
       }}
+      baseLink="/long-term-classes"
     />
   );
 };

@@ -1,4 +1,4 @@
-import { Route, RouterProvider, Routes, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
+import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
 import { MainPage } from "./modules/first-page/main-page";
 import { WorkshopsPage } from "./modules/classes-page/worksops-page";
 import { LongTermsPage } from "./modules/classes-page/long-terms-page";

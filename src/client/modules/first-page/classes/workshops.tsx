@@ -15,6 +15,7 @@ export const Workshops = () => {
           link: "./workshops",
           text: 'all workshops'
         }}
+        baseLink="/workshops"
       />
 
       <Container>

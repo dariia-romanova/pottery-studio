@@ -5,9 +5,10 @@ import clsx from 'clsx';
 type CardsProps = {
   cards: CardType[],
   type: 'short' | 'extended';
+  baseLink: string;
 };
 
-export const Cards = ({ cards, type }: CardsProps) => {
+export const Cards = ({ cards, type, baseLink }: CardsProps) => {
   return (
     <div className={clsx(
       styles.cards,
@@ -15,7 +16,7 @@ export const Cards = ({ cards, type }: CardsProps) => {
       type === 'extended' && styles.cards_extended
     )}>
       {cards.map((card) => (
-        <Card card={card} type={type} key={card.link} />
+        <Card card={card} type={type} key={card.link} baseLink={baseLink} />
       ))}
     </div>
   );

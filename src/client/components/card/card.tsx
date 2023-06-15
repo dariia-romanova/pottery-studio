@@ -20,9 +20,10 @@ export type CardType = {
 type CardProps = {
   card: CardType,
   type: 'short' | 'extended' | 'full',
+  baseLink?: string,
 };
 
-export const Card = ({ card, type }: CardProps) => {
+export const Card = ({ card, type, baseLink }: CardProps) => {
   if (type === 'full') {
     return (
       <div className={styles.card__full}>
@@ -54,7 +55,7 @@ export const Card = ({ card, type }: CardProps) => {
 
   return (
     <div className={styles.card}>
-      <Link to={card.link} className={styles.card_content}>
+      <Link to={`${baseLink}/${card.link}`} className={styles.card_content}>
         <div className={styles.card_head}>
           <div className={styles.card_complexity}>
             <p>{card.complexity}</p>
