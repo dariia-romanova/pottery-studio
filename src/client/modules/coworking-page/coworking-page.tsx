@@ -1,12 +1,12 @@
 import styles from './coworking-page.module.css';
-import HeaderImage from '../../assets/coworking-page.svg';
-import Image from '../../assets/coworking-page-2.svg';
+import Image from '../../assets/coworking-image.png';
 
 import { H1 } from "../../components/h1/h1";
 import { HeroSection } from "../../components/hero-section/hero-section";
 import { Paragraph } from '../../components/paragraph/paragraph';
 import { Container } from '../../components/container/container';
 import { CoworkingForm } from './coworking-form';
+import { CoworkingPageDecoraion } from './coworking-page-decoration';
 
 export const CoworkingPage = () => {
   return (
@@ -15,7 +15,9 @@ export const CoworkingPage = () => {
         <H1>
           Coworking
         </H1>
-        <img src={HeaderImage} className={styles.coworking_heroImage} />
+        <div className={styles.coworking_heroImage}>
+          <CoworkingPageDecoraion />
+        </div>
       </HeroSection>
         <Container>
           <div className={styles.coworking_content}>

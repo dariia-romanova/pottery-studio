@@ -1,10 +1,10 @@
-import Image from '../../assets/workshops-page-1.svg';
 import styles from './classes-page.module.css';
 import { HeroSection } from "../../components/hero-section/hero-section";
 import { H1 } from '../../components/h1/h1';
 import { Cards } from '../../components/card/cards';
 import { Container } from '../../components/container/container';
 import { workshopsList } from '../../constants/workshops';
+import { WorkshopsPageDecorations } from './workshops-page-decoration';
 
 export const WorkshopsPage = () => {
   return (
@@ -13,7 +13,9 @@ export const WorkshopsPage = () => {
         <H1>
           Workshops
         </H1>
-        <img src={Image} className={styles.classes_image} />
+        <div className={styles.classes_image} >
+          <WorkshopsPageDecorations />
+        </div>
       </HeroSection>
       <Container>
         <div className={styles.classes_content} >

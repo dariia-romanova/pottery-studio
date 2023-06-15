@@ -1,7 +1,11 @@
 .coworking_heroImage {
   position: absolute;
   right: 60px;
-  top: 200px;
+  top: 50px;
+}
+
+.coworking_decoration_text {
+  max-width: 90%;
 }
 
 .coworking_content {
@@ -26,7 +30,63 @@
   margin-bottom: 60px;
 }
 
+.coworking_decoration_text_path {
+  animation: path_animation 0.6s ease-out forwards;
+}
+
+.coworking_decoration_text_path_1 {
+  animation-delay: 0;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+
+.coworking_decoration_text_path_2 {
+  animation-delay: 0.3s;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+
+.coworking_decoration_text_path_3 {
+  animation-delay: 0.7s;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+}
+
+.coworking_decoration_text_path_4 {
+  animation: path_animation 1.7s ease-out forwards;
+  animation-delay: 1s;
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+}
+
+.coworking_decoration_text_path_5 {
+  animation-delay: 2s;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+
+.coworking_decoration_text_arrow {
+  animation: path_animation 0.5s ease-out forwards;
+  animation-delay: 2s;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+}
+
+.coworking_decoration_text_arrowTip {
+  animation: path_animation 0.5s ease-out forwards;
+  animation-delay: 2.3s;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+
+
 @media (max-width: 960px) {
+  .coworking_heroImage {
+    right: 5px;
+    width: 300px;
+    height: 100%;
+  }
+
   .coworking_content {
     padding-top: 110px;
   }
@@ -49,6 +109,10 @@
     padding-top: 44px;
   }
 
+  .coworking_heroImage {
+    display: none;
+  }
+
   .coworking_form {
     gap: 16px;
   }
@@ -59,5 +123,11 @@
 
   .coworking_firstParagraph {
     margin-bottom: 24px;
+  }
+}
+
+@keyframes path_animation {
+  to {
+    stroke-dashoffset: 0;
   }
 }
