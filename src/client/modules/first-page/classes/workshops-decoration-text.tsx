@@ -8,11 +8,12 @@ export const WorkshopsDecorationText = () => {
   return (
     <div ref={ref}>
       <svg
-      width="327"
-      height="139"
-      viewBox="0 0 327 139"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+        width="327"
+        height="139"
+        viewBox="0 0 327 139"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className={styles.workshops_image}
       >
         <path
           className={clsx(inView && styles.workshops_decoration_text_path, styles.workshops_decoration_text_path_1)}

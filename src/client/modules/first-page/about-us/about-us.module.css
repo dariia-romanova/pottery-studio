@@ -8,13 +8,10 @@
   object-fit: contain;
   height: auto;
 }
-.aboutUs_image_container {
-  object-fit: contain;
-  height: auto;
-}
 
 .aboutUs_image {
-  width: 100%
+  width: 100%;
+  height: auto;
 }
 
 .aboutUs_decoration_image {

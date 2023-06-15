@@ -3,9 +3,10 @@ import styles from './footer.module.css';
 export const FooterImage = () => {
   return (
     <svg
+      className={styles.footer_image}
       width="700"
       height="456"
-      viewBox="-100 0 900 456"
+      viewBox="-50 0 900 456"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

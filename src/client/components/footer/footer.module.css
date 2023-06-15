@@ -36,6 +36,16 @@
 }
 
 @media (max-width: 960px) {
+
+  .footer_image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .footer_image_text {
+    width: 80%;
+    height: auto;
+  }
   
   .footer_info {
     flex-direction: column-reverse;

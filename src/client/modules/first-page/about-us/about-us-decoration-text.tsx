@@ -8,6 +8,7 @@ export const AboutUsDecorationText = () => {
   return (
     <div ref={ref}>
       <svg
+        className={styles.aboutUs_image}
         width="539"
         height="506"
         viewBox="0 0 539 506"

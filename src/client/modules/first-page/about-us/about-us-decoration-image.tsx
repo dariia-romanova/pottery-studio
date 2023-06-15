@@ -3,7 +3,14 @@ import styles from './about-us.module.css';
 
 export const AboutUsDecorationImage = () => {
   return (
-    <svg width="569" height="442" viewBox="-20 0 600 442" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className={styles.aboutUs_image}
+      width="569"
+      height="442"
+      viewBox="-20 0 600 442"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <g
         className={clsx(styles.aboutUs_decoration_image, styles.aboutUs_decoration_image_1)}
       >

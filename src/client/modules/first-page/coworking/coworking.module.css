@@ -28,6 +28,10 @@
   .coworking {
     padding-top: 120px;
   }
+
+  .coworking_image {
+    width: 300px;
+  }
   
   .coworking_content {
     padding-bottom: 80px;
@@ -41,6 +45,10 @@
 @media (max-width: 620px) {
   .coworking {
     padding-top: 40px;
+  }
+
+  .coworking_image {
+    width: 200px
   }
 
   .coworking_content {

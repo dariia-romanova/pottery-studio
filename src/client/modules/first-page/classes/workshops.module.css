@@ -11,8 +11,10 @@
 }
 
 .workshops_image {
-  width: 100%
+  width: 100%;
+  height: auto;
 }
+
 
 .workshop_decoration_image {
   animation: rotation 1s ease-in-out infinite alternate;

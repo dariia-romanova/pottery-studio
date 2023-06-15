@@ -82,8 +82,24 @@
 
 
 @media (max-width: 960px) {
+  .hero_decoration_image {
+    top: -60px;
+  }
+
   .hero_highlight_image {
     left: -10px;
+  }
+}
+
+@media (max-width: 960px) {
+  .hero_decoration_image {
+    width: 50px;
+    top: -100px;
+    right: 10px;
+  }
+
+  .hero_decoration_text {
+    display: none;
   }
 }
 

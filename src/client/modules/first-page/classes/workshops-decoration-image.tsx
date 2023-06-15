@@ -3,7 +3,14 @@ import styles from './workshops.module.css';
 
 export const WorkshopsDecorationImage = () => {
   return (
-  <svg width="668" height="410" viewBox="0 0 668 410" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    width="668"
+    height="410"
+    viewBox="0 0 668 410"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={styles.workshops_image}
+  >
     <g
       className={clsx(styles.workshop_decoration_image, styles.workshop_decoration_image_2)}
     >
