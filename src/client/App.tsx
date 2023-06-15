@@ -1,4 +1,4 @@
-import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
+import { Route, RouterProvider, Routes, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
 import { MainPage } from "./modules/first-page/main-page";
 import { WorkshopsPage } from "./modules/classes-page/worksops-page";
 import { LongTermsPage } from "./modules/classes-page/long-terms-page";
@@ -7,6 +7,7 @@ import { workshopsList } from "./constants/workshops";
 import { longTermsList } from "./constants/long-terms";
 import { ClassPage } from "./modules/class-page/class-page";
 import { Layout } from "./modules/layout/layout";
+import { useScrollToTop } from "./hooks/useScrollToTop";
 
 
 const router = createBrowserRouter(createRoutesFromElements(
@@ -51,6 +52,7 @@ const router = createBrowserRouter(createRoutesFromElements(
 
 
 function App() {
+
   return (
     <> 
       <RouterProvider router={router} />

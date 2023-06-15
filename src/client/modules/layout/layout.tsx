@@ -4,8 +4,11 @@ import { Outlet } from "react-router-dom";
 import { Container } from "../../components/container/container";
 
 import styles from './layout.module.css';
+import { useScrollToTop } from "../../hooks/useScrollToTop";
 
 export const Layout = () => {
+  useScrollToTop();
+
   return (
     <>
       <div className={styles.header}>
