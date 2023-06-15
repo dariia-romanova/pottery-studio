@@ -27,6 +27,41 @@
   animation-delay: 0.3s;
 }
 
+.workshops_decoration_text_path {
+  animation: path_animation 0.6s ease-out forwards;
+}
+
+.workshops_decoration_text_path_1 {
+  animation-delay: 0;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+
+.workshops_decoration_text_path_2 {
+  animation-delay: 0.3s;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+
+.workshops_decoration_text_path_3 {
+  animation-delay: 0.7s;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+}
+
+.workshops_decoration_text_path_4 {
+  animation: path_animation 1.8s ease-out forwards;
+  animation-delay: 1s;
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+}
+
+.workshops_decoration_text_path_5 {
+  animation-delay: 2s;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+
 
 @media (max-width: 620px) {
   .workshops_images {
@@ -45,5 +80,11 @@
   }
   to {
     transform: rotate(5deg);
+  }
+}
+
+@keyframes path_animation {
+  to {
+    stroke-dashoffset: 0;
   }
 }

@@ -10,10 +10,14 @@
   top: 0;
 }
 
+.hero_highlight_image_scrolled {
+  left: -1000px;
+}
+
 .hero_highlight_path {
   stroke-dasharray: 722;
   stroke-dashoffset: 722;
-  animation: highlight_path_animation 1.5s ease-out 0.5s forwards;
+  animation: highlight_path_animation 1s ease-out 0.5s forwards;
 }
 
 .hero_decoration_image {
@@ -65,7 +69,7 @@
 
 .hero_decoration_text_path_arrow {
   animation: highlight_path_animation 1s ease-out forwards;
-  animation-delay: 2.2s;
+  animation-delay: 1.5s;
   stroke-dasharray: 400;
   stroke-dashoffset: 400;
 }
@@ -82,8 +86,6 @@
     left: -10px;
   }
 }
-
-
 
 @keyframes highlight_path_animation {
   to {

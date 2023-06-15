@@ -35,6 +35,72 @@
   animation-delay: 0.7s;
 }
 
+.aboutUs_decoration_text_path {
+  animation: path_animation 0.6s ease-out forwards;
+}
+
+.aboutUs_decoration_text_path_1 {
+  animation-delay: 0;
+  stroke-dasharray: 450;
+  stroke-dashoffset: 450;
+}
+
+.aboutUs_decoration_text_path_2 {
+  animation-delay: 0.5s;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+
+.aboutUs_decoration_text_path_3 {
+  animation-delay: 0.9s;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+
+.aboutUs_decoration_text_path_4 {
+  animation-delay: 1.2s;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+}
+
+.aboutUs_decoration_text_path_5 {
+  animation-delay: 1s;
+  stroke-dasharray: 250;
+  stroke-dashoffset: 250;
+}
+
+.aboutUs_decoration_text_path_6 {
+  animation-delay: 1.3s;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+
+.aboutUs_decoration_text_path_7 {
+  animation-delay: 1.7s;
+  stroke-dasharray: 220;
+  stroke-dashoffset: 220;
+}
+
+.aboutUs_decoration_text_path_8 {
+  animation-delay: 2.2s;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+
+.aboutUs_decoration_text_arrow {
+  animation: path_animation 0.5s ease-out forwards;
+  animation-delay: 2s;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+}
+
+.aboutUs_decoration_text_arrowTip {
+  animation: path_animation 0.5s ease-out forwards;
+  animation-delay: 2.3s;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+}
+
 @media (max-width: 620px) {
   .aboutUs_images {
     margin-top: 12px;
@@ -53,5 +119,11 @@
   }
   to {
     transform: rotate(2deg);
+  }
+}
+
+@keyframes path_animation {
+  to {
+    stroke-dashoffset: 0;
   }
 }

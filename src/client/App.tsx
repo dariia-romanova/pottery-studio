@@ -24,6 +24,7 @@ const router = createBrowserRouter(createRoutesFromElements(
       />
       {workshopsList.map((workshop) => (
         <Route
+            key={workshop.link}
             path = {`/workshops/${workshop.link}`}
             element={<ClassPage card={workshop} />}
         />
@@ -35,6 +36,7 @@ const router = createBrowserRouter(createRoutesFromElements(
       />
       {longTermsList.map((course) => (
         <Route
+            key={course.link}
             path = {`/long-term-classes/${course.link}`}
             element={<ClassPage card={course} />}
         />
