@@ -2,6 +2,9 @@ import express from "express";
 import ViteExpress from "vite-express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+import authRoute from "./routes/auth";
+import coursesRoute from "./routes/courses";
+import usersRoute from './routes/users';
 
 const app = express();
 dotenv.config();
@@ -17,16 +20,13 @@ const connect = async () => {
 
 mongoose.connection.on("disconected", () => {
   console.log('mongoDB disconnected')
-})
-
-mongoose.connection.on("connected", () => {
-  console.log('mongoDB connected')
-})
-
-
-app.get("/hello", (_, res) => {
-  res.send("Hello Vite + React + TypeScript!");
 });
+
+app.use(express.json());
+
+app.use("/api/auth", authRoute);
+app.use("/api/users", usersRoute);
+app.use("/api/courses", coursesRoute);
 
 ViteExpress.listen(app, 3000, () => {
   connect();
