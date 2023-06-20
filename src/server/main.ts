@@ -1,4 +1,5 @@
 import express from "express";
+import { Request, Response, NextFunction } from "express";
 import ViteExpress from "vite-express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
@@ -27,6 +28,24 @@ app.use(express.json());
 app.use("/api/auth", authRoute);
 app.use("/api/users", usersRoute);
 app.use("/api/courses", coursesRoute);
+
+interface Error {
+  status?: number,
+  message?: string,
+  stack?: any,
+}
+
+app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+  const errorStatus = err.status || 500;
+  const errorMessage = err.message || 'Something went wrong';
+
+  return res.status(errorStatus).json({
+    success: false,
+    status: errorStatus,
+    message: errorMessage,
+    stack: err.stack
+  })
+})
 
 ViteExpress.listen(app, 3000, () => {
   connect();

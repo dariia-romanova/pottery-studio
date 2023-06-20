@@ -4,14 +4,14 @@ import Course from "../models/Course";
 const router = express.Router();
 
 //CREATE
-router.post("/", async (req, res) => {
+router.post("/", async (req, res, next) => {
   const newCourse = new Course(req.body);
 
   try {
     const savedCouese = await newCourse.save();
-    res.status(200).json(savedCouese)
+    res.status(200).json(savedCouese);
   } catch (e) {
-    res.status(500).json(e);
+    next(e);
   }
 });
 
@@ -29,6 +29,7 @@ router.put("/:id", async (req, res) => {
     res.status(500).json(e);
   }
 });
+
 //DELETE
 router.delete("/:id", async (req, res) => {
   try {
@@ -36,7 +37,7 @@ router.delete("/:id", async (req, res) => {
       req.params.id
     );
 
-    res.status(200).json('Hotel has been delated');
+    res.status(200).json('Course has been delated');
   } catch (e) {
     res.status(500).json(e);
   }
@@ -56,7 +57,7 @@ router.get("/:id", async (req, res) => {
 });
 
 //GET ALL
-router.get("/:id", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const courses = await Course.find();
 

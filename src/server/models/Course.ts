@@ -14,11 +14,11 @@ const CourseSchema = new mongoose.Schema({
     required: true,
   },
   lessonsCount: {
-    type: String,
+    type: Number,
     required: true,
   },
   lessonDuration: {
-    type: String,
+    type: Number,
     required: true,
   },
   title: {
@@ -30,11 +30,11 @@ const CourseSchema = new mongoose.Schema({
     required: true,
   },
   dateStart: {
-    type: String,
+    type: Date,
     required: true,
   },
   dateEnd: {
-    type: String,
+    type: Date,
     required: true,
   },
   day: {
@@ -55,7 +55,6 @@ const CourseSchema = new mongoose.Schema({
   },
   photos: {
     type: [String],
-    required: true,
   },
 });
 
