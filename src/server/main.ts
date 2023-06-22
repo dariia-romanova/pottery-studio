@@ -8,6 +8,18 @@ import coursesRoute from "./routes/courses";
 import usersRoute from './routes/users';
 import cookieParser from "cookie-parser";
 
+declare global {
+  namespace Express {
+    interface Request {
+       user?: {
+        id: string,
+        isAdmin: boolean,
+       }
+    }
+  }
+}
+
+
 const app = express();
 dotenv.config();
 

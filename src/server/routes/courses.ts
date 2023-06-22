@@ -1,16 +1,17 @@
 import express from "express";
 import { createCourse, deleteCourse, getAllCourses, getCourseById, updateCourse } from "../controllers/courses";
+import { verifyAdmin } from "../utils/verifyToken";
 
 const router = express.Router();
 
 //CREATE
-router.post("/", createCourse);
+router.post("/", verifyAdmin, createCourse);
 
 //UPDATE
-router.put("/:id", updateCourse);
+router.put("/:id", verifyAdmin, updateCourse);
 
 //DELETE
-router.delete("/:id", deleteCourse);
+router.delete("/:id", verifyAdmin, deleteCourse);
 
 //GET BY ID
 router.get("/:id", getCourseById);
