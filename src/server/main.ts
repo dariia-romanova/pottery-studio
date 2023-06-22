@@ -6,6 +6,7 @@ import mongoose from "mongoose";
 import authRoute from "./routes/auth";
 import coursesRoute from "./routes/courses";
 import usersRoute from './routes/users';
+import cookieParser from "cookie-parser";
 
 const app = express();
 dotenv.config();
@@ -22,6 +23,8 @@ const connect = async () => {
 mongoose.connection.on("disconected", () => {
   console.log('mongoDB disconnected')
 });
+//middlewares
+app.use(cookieParser());
 
 app.use(express.json());
 
