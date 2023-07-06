@@ -51,8 +51,16 @@ export const getCourseById = async (req: Request, res: Response, next: NextFunct
 };
 
 export const getAllCourses = async (req: Request, res: Response, next: NextFunction) => {
+  const coursesType = req.query.type;
+
   try {
-    const courses = await Course.find();
+    let courses;
+  
+    if (coursesType) {
+      courses = await Course.find({ type: coursesType });
+    } else {
+      courses = await Course.find();
+    }
 
     res.status(200).json(courses);
   } catch (e) {

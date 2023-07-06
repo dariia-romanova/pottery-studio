@@ -38,6 +38,7 @@ export const login = async (req: Request, res: Response, next: NextFunction) => 
     }
     const token = jwt.sign({ id: user._id, isAdmin: user.isAdmin }, process.env.JWT || '')
     const { password, isAdmin, ...other} = user._doc;
+
     res
       .cookie('access_token', token, {
         httpOnly: true,
