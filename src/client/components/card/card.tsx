@@ -2,9 +2,10 @@ import { Link } from 'react-router-dom';
 import styles from './cards.module.css';
 import { Button } from '../button/button';
 import { Paragraph } from '../paragraph/paragraph';
+import { getDates } from '../../utils/getDates';
 
 export type CardType = {
-    link: string,
+    slug: string,
     complexity: string,
     lessons: string,
     title: string,
@@ -24,6 +25,10 @@ type CardProps = {
 };
 
 export const Card = ({ card, type, baseLink }: CardProps) => {
+
+
+  const dates = getDates(card.dateStart, card.dateEnd);
+
   if (type === 'full') {
     return (
       <div className={styles.card__full}>
@@ -43,7 +48,7 @@ export const Card = ({ card, type, baseLink }: CardProps) => {
         <div className={styles.card__full_info}>
           <div className={styles.card__full_dates}>
               <p>{card.day} {card.time}</p>
-              <p>{card.dateStart} - {card.dateEnd}</p>
+              <p>{dates}</p>
             </div>
 
             <div className={styles.card__full_price}>{card.price}$</div>
@@ -55,7 +60,7 @@ export const Card = ({ card, type, baseLink }: CardProps) => {
 
   return (
     <div className={styles.card}>
-      <Link to={`${baseLink}/${card.link}`} className={styles.card_content}>
+      <Link to={`${baseLink}/${card.slug}`} className={styles.card_content}>
         <div className={styles.card_head}>
           <div className={styles.card_complexity}>
             <p>{card.complexity}</p>
@@ -74,12 +79,12 @@ export const Card = ({ card, type, baseLink }: CardProps) => {
           )}
 
           <div className={styles.card_dates}>
-            <p>{card.dateStart} - {card.dateEnd}</p>
+            <p>{dates}</p>
             <p>{card.day} {card.time}</p>
           </div>
           {type === 'extended' && (
             <div className={styles.card_bookings}>
-              <Button text="book" link={card.link} />
+              <Button text="book" link={card.slug} />
               <div className={styles.card_price}>{card.price}$</div>
             </div>
           )}

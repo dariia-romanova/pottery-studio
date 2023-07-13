@@ -3,12 +3,10 @@ import { MainPage } from "./modules/first-page/main-page";
 import { WorkshopsPage } from "./modules/classes-page/worksops-page";
 import { LongTermsPage } from "./modules/classes-page/long-terms-page";
 import { CoworkingPage } from "./modules/coworking-page/coworking-page";
-import { workshopsList } from "./constants/workshops";
-import { longTermsList } from "./constants/long-terms";
+// import { workshopsList } from "./constants/workshops";
+// import { longTermsList } from "./constants/long-terms";
 import { ClassPage } from "./modules/class-page/class-page";
 import { Layout } from "./modules/layout/layout";
-import { useScrollToTop } from "./hooks/useScrollToTop";
-
 
 const router = createBrowserRouter(createRoutesFromElements(
   <>
@@ -23,25 +21,19 @@ const router = createBrowserRouter(createRoutesFromElements(
           path = "/workshops"
           element={<WorkshopsPage />}
       />
-      {workshopsList.map((workshop) => (
         <Route
-            key={workshop.link}
-            path = {`/workshops/${workshop.link}`}
-            element={<ClassPage card={workshop} />}
+            path = {`/workshops/:slug`}
+            element={<ClassPage />}
         />
-      ))}
 
       <Route
         path = "/long-term-classes"
         element={<LongTermsPage />}
       />
-      {longTermsList.map((course) => (
-        <Route
-            key={course.link}
-            path = {`/long-term-classes/${course.link}`}
-            element={<ClassPage card={course} />}
-        />
-      ))}
+      <Route
+          path = {`/long-term-classes/:slug`}
+          element={<ClassPage />}
+      />
       <Route
           path = "/coworking"
           element={<CoworkingPage />}

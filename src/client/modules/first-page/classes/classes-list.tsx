@@ -19,6 +19,8 @@ export const ClassesList = ({ cardsList, title, button, baseLink }: ClassesListP
   const isDesktop = useMediaQuery('(min-width: 960px)');
   const isTablet = useMediaQuery('(min-width: 620px)');
 
+  if (!cardsList) return <></>;
+
   const cardCounts = isDesktop ? 3 : isTablet ? 2 : 3;
   const cards = cardsList.slice(0, cardCounts);
 

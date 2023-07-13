@@ -12,6 +12,7 @@ const CourseSchema = new mongoose.Schema({
   slug: {
     type: String,
     required: true,
+    unique: true,
   },
   lessonsCount: {
     type: Number,

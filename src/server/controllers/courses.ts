@@ -38,11 +38,23 @@ export const deleteCourse = async (req: Request, res: Response, next: NextFuncti
   }
 };
 
-export const getCourseById = async (req: Request, res: Response, next: NextFunction) => {
+// export const getCourseById = async (req: Request, res: Response, next: NextFunction) => {
+//   try {
+//     const course = await Course.findById(
+//       req.params.id
+//     );
+
+//     res.status(200).json(course);
+//   } catch (e) {
+//     next(e);
+//   }
+// };
+
+export const getCourseBySlug = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const course = await Course.findById(
-      req.params.id
-    );
+    const course = await Course.findOne({
+      slug: req.params.slug,
+    });
 
     res.status(200).json(course);
   } catch (e) {

@@ -3,10 +3,12 @@ import { HeroSection } from "../../components/hero-section/hero-section";
 import { H1 } from '../../components/h1/h1';
 import { Cards } from '../../components/card/cards';
 import { Container } from '../../components/container/container';
-import { workshopsList } from '../../constants/workshops';
 import { WorkshopsPageDecorations } from './workshops-page-decoration';
+import { useFetch } from '../../hooks/useFetch';
 
 export const WorkshopsPage = () => {
+  const { data, loading } = useFetch("api/courses?type=workshop");
+
   return (
     <>
       <HeroSection >
@@ -19,7 +21,11 @@ export const WorkshopsPage = () => {
       </HeroSection>
       <Container>
         <div className={styles.classes_content} >
-          <Cards cards={workshopsList} type="extended" baseLink='/workshops' />
+          {loading ? (
+            <>Loading workshops</>
+          ) : (
+            <Cards cards={data} type="extended" baseLink='/workshops' />
+          )}
         </div>
       </Container>
     </>

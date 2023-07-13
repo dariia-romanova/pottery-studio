@@ -9,6 +9,10 @@ type CardsProps = {
 };
 
 export const Cards = ({ cards, type, baseLink }: CardsProps) => {
+  if (!cards) {
+    return <></>
+  }
+
   return (
     <div className={clsx(
       styles.cards,
@@ -16,7 +20,7 @@ export const Cards = ({ cards, type, baseLink }: CardsProps) => {
       type === 'extended' && styles.cards_extended
     )}>
       {cards.map((card) => (
-        <Card card={card} type={type} key={card.link} baseLink={baseLink} />
+        <Card card={card} type={type} key={card.slug} baseLink={baseLink} />
       ))}
     </div>
   );
