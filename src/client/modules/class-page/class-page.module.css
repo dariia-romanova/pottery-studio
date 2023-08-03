@@ -12,7 +12,13 @@
   margin-top: 120px;
 }
 
-@media (max-width: 620px) {
+.class_loading {
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 960px) {
   .class_content {
     padding: 44px 0 80px;
   }

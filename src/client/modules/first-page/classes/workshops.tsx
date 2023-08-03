@@ -10,19 +10,16 @@ export const Workshops = () => {
 
   return (
     <div>
-      {loading ? (
-        <>Loading workshops</>
-      ) : (
-        <ClassesList
-          cardsList={data}
-          title="workshops"
-          button= {{
-            link: "./workshops",
-            text: 'all workshops'
-          }}
-          baseLink="/workshops"
-        />
-      )}
+      <ClassesList
+        cardsList={data}
+        title="workshops"
+        button= {{
+          link: "./workshops",
+          text: 'all workshops'
+        }}
+        baseLink="/workshops"
+        loading={loading}
+      />
 
       <Container>
         <div className={styles.workshops_images}>

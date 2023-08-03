@@ -8,6 +8,7 @@ import { ClassForm } from "./class-form";
 import { useLocation } from 'react-router-dom';
 import { useFetch } from "../../hooks/useFetch";
 import { getDates } from "../../utils/getDates";
+import { Loading } from "../../components/loading/loading";
 
 type ClassPageProps = {
   card: CardType,
@@ -18,12 +19,16 @@ type ClassPageProps = {
     const slug = location.pathname.split('/').slice(-1)[0];
     const { data, loading } = useFetch(`api/courses/${slug}`);
 
+    if (loading) return (
+      <div className={styles.class_loading}>
+        <Loading />
+      </div>
+    );
+
     if (!data) return <></>;
-    if (loading) return <></>;
+  
 
     const dates = getDates(data.dateStart, data.dateEnd);
-
-    console.log(data.dateStart, data.dateEnd)
   
   return (
     <>

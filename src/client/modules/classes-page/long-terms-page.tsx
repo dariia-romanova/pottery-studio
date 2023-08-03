@@ -5,9 +5,18 @@ import { Cards } from '../../components/card/cards';
 import { Container } from '../../components/container/container';
 import { LongTermsDecoration } from './long-terms-decoration';
 import { useFetch } from '../../hooks/useFetch';
+import { Loading } from '../../components/loading/loading';
 
 export const LongTermsPage = () => {
   const { data, loading } = useFetch("api/courses?type=longterms");
+
+  if (loading) {
+    return (
+      <div className={styles.classes_loading}>
+        <Loading />
+      </div>
+    );
+  }
 
   return (
     <>
@@ -23,11 +32,7 @@ export const LongTermsPage = () => {
       </HeroSection>
       <Container>
         <div className={styles.classes_content} >
-          {loading ? (
-          <>Loading long-term course</>
-          ) : (
-            <Cards cards={data} type="extended" baseLink='/long-term-classes' />
-          )}
+          <Cards cards={data} type="extended" baseLink='/long-term-classes' />
         </div>
       </Container>
     </>

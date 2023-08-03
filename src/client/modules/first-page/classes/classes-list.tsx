@@ -1,9 +1,9 @@
-import useMediaQuery from "../../../hooks/useMediaQuery";
 import styles from "./classes-list.module.css";
 import { Section } from "../../../components/section/section";
 import { Button } from "../../../components/button/button";
 import { Cards } from "../../../components/card/cards";
 import { CardType } from "../../../components/card/card";
+import { Loading } from "../../../components/loading/loading";
 
 type ClassesListProps = {
   cardsList: CardType[],
@@ -13,21 +13,21 @@ type ClassesListProps = {
     text: string,
   },
   baseLink: string,
+  loading: boolean,
 }
 
-export const ClassesList = ({ cardsList, title, button, baseLink }: ClassesListProps) => {
-  const isDesktop = useMediaQuery('(min-width: 960px)');
-  const isTablet = useMediaQuery('(min-width: 620px)');
-
-  if (!cardsList) return <></>;
-
-  const cardCounts = isDesktop ? 3 : isTablet ? 2 : 3;
-  const cards = cardsList.slice(0, cardCounts);
+export const ClassesList = ({ cardsList, title, button, baseLink, loading }: ClassesListProps) => {
 
   return (
     <Section title={title}>
       <div className={styles.workshops}>
-        <Cards cards={cards} type="short" baseLink={baseLink} />
+        {loading ? (
+          <div>
+            <Loading />
+          </div>
+        ) : (
+          <Cards cards={cardsList} type="short" baseLink={baseLink} />
+        )}
       </div>
       <Button link={button.link} text={button.text}/>
     </Section>

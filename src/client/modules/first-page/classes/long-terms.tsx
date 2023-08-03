@@ -4,15 +4,10 @@ import { ClassesList } from "./classes-list";
 export const LongTerms = () => {
   const { data, loading } = useFetch("api/courses?type=longterms");
 
-  if (loading) {
-    return (
-      <>Loading long-term course</>
-    );
-  };
-
   return (
     <ClassesList
       cardsList={data}
+      loading={loading}
       title="long-term courses"
       button= {{
         link: "./long-term-classes",

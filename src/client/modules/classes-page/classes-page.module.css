@@ -12,6 +12,12 @@
   padding-top: 110px;
 }
 
+.classes_loading {
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+}
+
 .worksops_decoration_text {
   max-width: 90%;
 }

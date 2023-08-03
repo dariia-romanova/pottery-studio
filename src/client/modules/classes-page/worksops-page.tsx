@@ -5,9 +5,18 @@ import { Cards } from '../../components/card/cards';
 import { Container } from '../../components/container/container';
 import { WorkshopsPageDecorations } from './workshops-page-decoration';
 import { useFetch } from '../../hooks/useFetch';
+import { Loading } from '../../components/loading/loading';
 
 export const WorkshopsPage = () => {
   const { data, loading } = useFetch("api/courses?type=workshop");
+
+  if (loading) {
+    return (
+      <div className={styles.classes_loading}>
+        <Loading />
+      </div>
+    );
+  };
 
   return (
     <>
@@ -21,11 +30,7 @@ export const WorkshopsPage = () => {
       </HeroSection>
       <Container>
         <div className={styles.classes_content} >
-          {loading ? (
-            <>Loading workshops</>
-          ) : (
-            <Cards cards={data} type="extended" baseLink='/workshops' />
-          )}
+          <Cards cards={data} type="extended" baseLink='/workshops' />
         </div>
       </Container>
     </>
