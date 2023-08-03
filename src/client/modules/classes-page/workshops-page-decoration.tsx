@@ -33,8 +33,8 @@ export const WorkshopsPageDecorations = () => {
           className={clsx(inView && styles.worksops_decoration_text_path, styles.worksops_decoration_text_path_3)}
           d="M229.7 179.828C234.447 200.004 238.355 201.048 240.843 221.609C242.177 232.636 241.112 215.93 241.512 211.942C241.922 207.854 244.462 174.863 252.223 177.27C255.218 178.198 256.612 185.88 257.92 188.222C260.866 193.497 261.288 200.294 267.804 202.435C280.212 206.512 287.885 190.266 285.473 180.013"
           stroke="#1F1F1F"
-          stroke-width="3"
-          stroke-linecap="round"
+          strokeWidth="3"
+          strokeLinecap="round"
         />
         <path
           className={clsx(inView && styles.worksops_decoration_text_path, styles.worksops_decoration_text_path_4)}

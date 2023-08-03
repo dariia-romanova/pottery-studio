@@ -1,11 +1,14 @@
 .heroSection {
-  background-color: #F59ADB;
+  background-image: linear-gradient(#F59ADB 50%, transparent 50%);
+  background-size: 200% 200%;
   position: relative;
+  animation: backgroundAppearance 0.5s ease-out;
 }
 
 .heroSection_title {
   padding: 100px 0px 120px;
   max-width: 1240px;
+  animation: titleAppearance 1s ease-out;
 }
 
 @media (max-width: 960px) {
@@ -23,6 +26,30 @@
 
   .heroSection_title {
     padding: 20px 0px 80px;
+  }
+}
+
+@keyframes backgroundAppearance {
+  from {
+    background-position: 100% 100%;
+  }
+
+  to {
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes titleAppearance {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100;
   }
 }
 
