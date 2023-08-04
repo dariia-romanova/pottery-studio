@@ -18,9 +18,21 @@
   justify-content: center;
 }
 
+.class_noplaces {
+  background-color: #DDFA8A;
+  padding: 44px 0;
+  font-weight: 200;
+  font-size: 50px;
+}
+
 @media (max-width: 960px) {
   .class_content {
     padding: 44px 0 80px;
+  }
+
+  .class_noplaces {
+    font-size: 40px;
+    width: 100%;
   }
 
   .class_formContainer {
@@ -44,5 +56,10 @@
 
   .class_form {
     gap: 16px;
+  }
+
+  .class_noplaces {
+    font-size: 28px;
+    width: 100%;
   }
 }

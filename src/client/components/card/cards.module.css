@@ -74,6 +74,15 @@
   line-height: 1.2;
 }
 
+.card_noplaces {
+  padding: 6px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 22px;
+  background-color: #DDFA8A;
+  max-width: max-content;
+}
+
 .card_bookings {
   display: flex;
   justify-content: space-between;

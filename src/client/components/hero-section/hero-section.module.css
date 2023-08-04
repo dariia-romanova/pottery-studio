@@ -8,7 +8,7 @@
 .heroSection_title {
   padding: 100px 0px 120px;
   max-width: 1240px;
-  animation: titleAppearance 1s ease-out;
+  animation: titleAppearance 0.75s ease-out;
 }
 
 @media (max-width: 960px) {
@@ -44,7 +44,7 @@
     opacity: 0;
   }
 
-  50% {
+  75% {
     opacity: 0;
   }
 

@@ -33,12 +33,12 @@ export const Card = ({ card, type, baseLink }: CardProps) => {
     return (
       <div className={styles.card__full}>
         <div className={styles.card__full_head}>
-          <div className={styles.card_complexity}>
+          {/* <div className={styles.card_complexity}>
             <p>{card.complexity}</p>
             <div className={styles.card_complexity_underline} />
-          </div>
+          </div> */}
 
-          <p>{card.placesLeft} place left</p>
+         <p>{card.placesLeft} place left</p>
         </div>
 
         <div className={styles.card_lessons}>{card.lessons}</div>
@@ -75,6 +75,12 @@ export const Card = ({ card, type, baseLink }: CardProps) => {
           {type === 'extended' && (
             <p className={styles.card_description}>
               {card.description}
+            </p>
+          )}
+
+          {!card.placesLeft && (
+            <p className={styles.card_noplaces}>
+              No places left
             </p>
           )}
 
