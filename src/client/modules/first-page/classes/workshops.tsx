@@ -6,7 +6,7 @@ import { WorkshopsDecorationText } from './workshops-decoration-text';
 import { useFetch } from '../../../hooks/useFetch';
 
 export const Workshops = () => {
-  const { data, loading } = useFetch("api/courses?type=workshop");
+  const { data, loading } = useFetch("api/courses?type=workshop&limit=3");
 
   return (
     <div>

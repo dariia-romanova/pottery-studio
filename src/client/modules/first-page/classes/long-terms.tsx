@@ -2,7 +2,7 @@ import { useFetch } from "../../../hooks/useFetch";
 import { ClassesList } from "./classes-list";
 
 export const LongTerms = () => {
-  const { data, loading } = useFetch("api/courses?type=longterms");
+  const { data, loading } = useFetch("api/courses?type=longterms&limit=3");
 
   return (
     <ClassesList

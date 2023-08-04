@@ -64,14 +64,15 @@ export const getCourseBySlug = async (req: Request, res: Response, next: NextFun
 
 export const getAllCourses = async (req: Request, res: Response, next: NextFunction) => {
   const coursesType = req.query.type;
+  const limit = parseInt(req.query.limit as string);
 
   try {
     let courses;
   
     if (coursesType) {
-      courses = await Course.find({ type: coursesType });
+      courses = await Course.find({ type: coursesType }).limit(limit);
     } else {
-      courses = await Course.find();
+      courses = await Course.find().limit(limit);
     }
 
     res.status(200).json(courses);
