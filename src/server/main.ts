@@ -4,7 +4,9 @@ import ViteExpress from "vite-express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 import authRoute from "./routes/auth";
+import courseRoute from "./routes/course";
 import coursesRoute from "./routes/courses";
+import userRoute from './routes/user';
 import usersRoute from './routes/users';
 import cookieParser from "cookie-parser";
 
@@ -41,7 +43,9 @@ app.use(cookieParser());
 app.use(express.json());
 
 app.use("/api/auth", authRoute);
+app.use("/api/user", userRoute);
 app.use("/api/users", usersRoute);
+app.use("/api/course", courseRoute);
 app.use("/api/courses", coursesRoute);
 
 interface Error {

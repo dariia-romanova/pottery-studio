@@ -17,7 +17,7 @@ type ClassPageProps = {
   export const ClassPage = () => {
     const location = useLocation();
     const slug = location.pathname.split('/').slice(-1)[0];
-    const { data, loading } = useFetch(`api/courses/${slug}`);
+    const { data, loading } = useFetch(`api/course/${slug}`);
 
     if (loading) return (
       <div className={styles.class_loading}>
