@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from './input.module.css';
 
 type InputProps = {
-  type: 'text' | 'email' | 'date' | 'tel' | 'textarea',
+  type: 'text' | 'email' | 'date' | 'tel' | 'textarea' | 'password', 
   label: string,
   tip: string,
   required?: boolean,

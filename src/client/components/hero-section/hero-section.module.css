@@ -11,6 +11,10 @@
   animation: titleAppearance 0.75s ease-out;
 }
 
+.heroSection_title__small {
+  padding: 50px 0px 70px;
+}
+
 @media (max-width: 960px) {
   .heroSection_title {
     padding: 56px 0px 80px;
@@ -26,6 +30,10 @@
 
   .heroSection_title {
     padding: 20px 0px 80px;
+  }
+
+  .heroSection_title__small {
+    padding: 10px 0px 50px;
   }
 }
 

@@ -12,6 +12,10 @@
   margin-right: 20px;
 }
 
+.button_title__noArrow {
+  margin-right: 0px;
+}
+
 .button_arrow {
   position: relative;
   left: 0;

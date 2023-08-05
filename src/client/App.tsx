@@ -7,6 +7,7 @@ import { CoworkingPage } from "./modules/coworking-page/coworking-page";
 // import { longTermsList } from "./constants/long-terms";
 import { ClassPage } from "./modules/class-page/class-page";
 import { Layout } from "./modules/layout/layout";
+import { Login } from "./modules/auth/login";
 
 const router = createBrowserRouter(createRoutesFromElements(
   <>
@@ -37,6 +38,14 @@ const router = createBrowserRouter(createRoutesFromElements(
       <Route
           path = "/coworking"
           element={<CoworkingPage />}
+      />
+      <Route
+        path = "/login"
+        element={<Login />}
+      />
+      <Route
+        path = "/signin"
+        element={<></>}
       />
     </Route>
   </>
