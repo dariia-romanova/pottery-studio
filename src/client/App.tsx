@@ -8,6 +8,7 @@ import { CoworkingPage } from "./modules/coworking-page/coworking-page";
 import { ClassPage } from "./modules/class-page/class-page";
 import { Layout } from "./modules/layout/layout";
 import { Login } from "./modules/auth/login";
+import { SignIn } from "./modules/auth/signin";
 
 const router = createBrowserRouter(createRoutesFromElements(
   <>
@@ -45,7 +46,7 @@ const router = createBrowserRouter(createRoutesFromElements(
       />
       <Route
         path = "/signin"
-        element={<></>}
+        element={<SignIn />}
       />
     </Route>
   </>
